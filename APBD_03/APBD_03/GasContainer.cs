@@ -1,15 +1,20 @@
 ﻿
 namespace APBD_03;
 
-public class GasContainer : BaseContainer
+public class GasContainer : BaseContainer, IHazardNotifier
 {
-    public override void loadContainer()
+    public double pressure { get; set; }
+    
+    public GasContainer(double height,double containerMass, double depth, double maxContainerMass, double pressure) : base(ContainerTypes.Gas, height, containerMass, depth, maxContainerMass)
     {
-        throw new NotImplementedException();
-    }
-
+        this.pressure = pressure;
+    }   
     public override void unloadContainer()
     {
-        throw new NotImplementedException();
+        mass *= 0.05;
+    }
+    public string sendHazardNotification(string message)
+    {
+        return $"Hazard notification: {message}";
     }
 }
