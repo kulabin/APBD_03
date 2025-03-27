@@ -19,6 +19,17 @@ public abstract class BaseContainer
         this.maxContainerMass = maxContainerMass;
     }
 
-    public abstract void loadContainer();
-    public abstract void unloadContainer();
+    public virtual void loadContainer(double massToLoad)
+    {
+        if (containerMass+mass > maxContainerMass)
+        {
+            throw new OverflowException("Container is overweight");
+        }
+        mass += massToLoad;
+    }
+
+    public virtual void unloadContainer()
+    {
+        mass = 0;
+    }
 }
