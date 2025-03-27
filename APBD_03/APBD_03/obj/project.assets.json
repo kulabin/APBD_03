@@ -8,26 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\s31099\\.nuget\\packages\\": {}
+    "C:\\Users\\pawel\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\s31099\\Desktop\\APBD_03\\APBD_03\\APBD_03.csproj",
+      "projectUniqueName": "C:\\Users\\pawel\\Desktop\\programowanie  cwiczenia\\sem4\\apbd\\APBD_03\\APBD_03\\APBD_03\\APBD_03.csproj",
       "projectName": "APBD_03",
-      "projectPath": "C:\\Users\\s31099\\Desktop\\APBD_03\\APBD_03\\APBD_03.csproj",
-      "packagesPath": "C:\\Users\\s31099\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\s31099\\Desktop\\APBD_03\\APBD_03\\obj\\",
+      "projectPath": "C:\\Users\\pawel\\Desktop\\programowanie  cwiczenia\\sem4\\apbd\\APBD_03\\APBD_03\\APBD_03\\APBD_03.csproj",
+      "packagesPath": "C:\\Users\\pawel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pawel\\Desktop\\programowanie  cwiczenia\\sem4\\apbd\\APBD_03\\APBD_03\\APBD_03\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\s31099\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\pawel\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -66,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.407/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

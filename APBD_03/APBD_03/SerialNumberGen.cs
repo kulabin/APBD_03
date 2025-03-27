@@ -2,7 +2,7 @@
 
 public class SerialNumberGen
 {
-    private string serialNumber;
+    public string serialNumber;
     private int id;
     private const string prefix = "KON";
 
