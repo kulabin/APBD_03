@@ -2,22 +2,27 @@
 
 public class LiquidContainer : BaseContainer,IHazardNotifier
 {
-    public override void loadContainer()
+    public bool isHazardous { get; }
+
+    public LiquidContainer(ContainerTypes containerType, double height, double containerMass, double depth, double maxContainerMass, bool isHazardous) : base(containerType, height, containerMass, depth, maxContainerMass)
     {
-        if (containerMass+mass > maxContainerMass)
+        this.isHazardous = isHazardous;
+    }
+
+
+    public override void loadContainer(double massToLoad)
+    {
+        base.loadContainer(massToLoad);
+        
+        double allowedCapacity =  isHazardous ? maxContainerMass * 0.5 : maxContainerMass * 0.9;
+        if (maxContainerMass > allowedCapacity)
         {
-            throw new OverflowException("Container is overweight");
-            
+            sendHazardNotification($"Container {serialNumber} exceeded safe capacity for {(isHazardous ? "hazardous" : "non-hazardous")} cargo.");
         }
     }
 
-    public override void unloadContainer()
+    public string sendHazardNotification(string message)
     {
-        throw new NotImplementedException();
-    }
-
-    public string sendHazardNotification()
-    {
-        return $"Dangerous situation for: {serialNumber}";
+        return $"Hazard notification: {message}";
     }
 }
