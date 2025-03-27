@@ -32,4 +32,9 @@ public abstract class BaseContainer
     {
         mass = 0;
     }
+    
+    public override string ToString()
+    {
+        return $"Container {serialNumber}: Cargo={mass}kg, MaxCargo={maxContainerMass}kg, Height={height}cm, Depth={depth}cm, ContainerMass={containerMass}kg";
+    }
 }
