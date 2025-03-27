@@ -11,7 +11,7 @@ public class ContainerShip
     {
         this.maxSpeed = maxSpeed;
         this.maxContainers = maxContainers;
-        this.maxMass = maxMass;
+        this.maxMass = maxMass*1000;
     }
 
     public void loadContainer(BaseContainer container)
@@ -65,5 +65,10 @@ public class ContainerShip
             Containers.Remove(containerToTransfer);
             destinationShip.loadContainer(containerToTransfer);
         }
+    }
+    
+    public override string ToString()
+    {
+        return $"Ship: Speed={maxSpeed} knots, MaxContainers={maxContainers}, MaxWeight={maxMass/1000}t\nContainers:\n{string.Join("\n", Containers)}";
     }
 }

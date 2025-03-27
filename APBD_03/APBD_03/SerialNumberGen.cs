@@ -3,7 +3,7 @@
 public class SerialNumberGen
 {
     public string serialNumber;
-    private int id;
+    private static int id = 1;
     private const string prefix = "KON";
 
     public SerialNumberGen(ContainerTypes containerType)
