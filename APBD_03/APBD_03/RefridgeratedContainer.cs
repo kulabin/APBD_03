@@ -6,7 +6,7 @@ public class RefridgeratedContainer : BaseContainer
     public double temperatureRequired { get; set; }
     public double currentTemp { get; set; }
 
-    public RefridgeratedContainer(ContainerTypes containerType, double height, double containerMass, double depth, double maxContainerMass, string productType, double temperatureRequired, double currentTemp) : base(containerType, height, containerMass, depth, maxContainerMass)
+    public RefridgeratedContainer(double height, double containerMass, double depth, double maxContainerMass, string productType, double temperatureRequired, double currentTemp) : base(ContainerTypes.Refrigderated, height, containerMass, depth, maxContainerMass)
     {
         this.productType = productType;
         this.temperatureRequired = temperatureRequired;
